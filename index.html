@@ -6,64 +6,40 @@
         <title>Reflex</title>
 
         <!-- Import Stylesheets -->
-        <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
-        <link href="http://twitter.github.com/bootstrap/assets/js/google-code-prettify/prettify.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link href="css/main.css" type="text/css" rel="stylesheet" />
         <link href="http://maxcdn.bootstrapcdn.com/bootswatch/3.2.0/cosmo/bootstrap.min.css" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 
         <!-- Import js -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
-        <script type="text/javascript" src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-        <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
-        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery.touchSwipe.min.js"></script>
+        <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.min.js"></script>     
+        <script type="text/javascript" src="js/app.js"></script>
+
+        <!-- Todo: Clean up and move to main.css -->
         <style>
-            body {
-                overflow: hidden;
-            }
-
-            .test {
-               heght:100%;
-               width:100%;
-            }
-
             h1 {
                 text-align: center;
                 font-size: 400%;
                 margin: 0px 0px -30px 0px;
             }
-
-            h4 {
-                text-align: center;
-            }
-
-            h3 {
-              text-align: center;
-            }
-
         </style>
+        <script>
+            // startGame();
+        </script>
     </head>
 
     <body>
         <h1>Reflex</h1>
         <h3>Test your reactions.</h3>
-			<script id='code_1'>
-				$(function() {
-					$("#test").swipe( {
-					  swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-					  	$("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
-					  },
-					  threshold:0,
-					  fingers:'all'
-					});
-				});
-			</script>
-
+<!--
+        <a href="#" class="btn btn-primary" style="text-align: center;">Let's Go!</a>
+-->
         <div id="test" class="box">Swipe me with different combinations of fingers!</div>
-   </body>
-<footer>
-<!-- Dirty - replace with css-->
-<br><br><br><br><br><br><br><br>
-<h4>Built by Niraj Pant & Alex Motchoulski</h4>
-</footer>
+    </body>
+
+    <footer>
+        <h4>Built by Niraj Pant & Alex Motchoulski</h4>
+    </footer>
 </html>
