@@ -26,7 +26,7 @@ function startGame() {
    }
 };
 
-function displayDirection(index) { //green: #2ecc71, red: #e74c3c
+(function displayDirection(index) { //green: #2ecc71, red: #e74c3c
     correct = true;
     time = Date();
     colorNum = Math.floor(Math.random)
@@ -37,13 +37,26 @@ function displayDirection(index) { //green: #2ecc71, red: #e74c3c
         color = "Green";
     }
     switch(index) {
-      case 0:
+      case 0:  $(".bordered").css("border", "1px solid black"); 
       case 1:
       case 2:
       case 3:
       case 4:
     }
-};
+})(jQuery);
+
+ $(function() {
+    $("#test").swipe( {
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+            $("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
+        },
+        tap:function(event, target) {
+            $("#test").text("You tapped");
+        },
+        threshold:0,
+        fingers:'all'
+    });
+});
 // var score = 0
 // var lives = 3;
 //
