@@ -7,8 +7,9 @@ var time = 0; //time in ms
 
 function startGame() {
     while (lives > 0) {
-        direction = Math.floor(Math.random * 4);
+        direction = Math.floor(Math.random()*2);
         displayDirection(direction);
+        console.log("direction is: " + direction)
 
         if (correct) {
             if (time < 200) {
@@ -26,7 +27,8 @@ function startGame() {
    }
 };
 
-(function displayDirection(index) { //green: #2ecc71, red: #e74c3c
+function displayDirection(index) { //green: #2ecc71, red: #e74c3c
+    console.log(index);
     correct = true;
     time = Date();
     colorNum = Math.floor(Math.random)
@@ -43,7 +45,7 @@ function startGame() {
       case 3:
       case 4:
     }
-})(jQuery);
+};
 
  $(function() {
     $("#test").swipe( {
