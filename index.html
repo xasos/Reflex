@@ -24,6 +24,7 @@
         <style>
             body {
                 overflow: hidden;
+                /* background-color: #3498db; */
             }
 
             .test {
@@ -59,6 +60,9 @@
 					  swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
 					  	$("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
 					  },
+            tap:function(event, target) {
+              $("#test").text("You tapped");
+            },
 					  threshold:0,
 					  fingers:'all'
 					});
