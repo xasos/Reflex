@@ -28,7 +28,7 @@
 	margin-bottom:20px;
 	max-width:768px;
 	height:500px;
-  width:100%;
+    width:100%;
 
 	padding: 10px;
 	background-color: #EEE;
@@ -51,6 +51,8 @@ body
 	font-size: 13px;
 	line-height: 18px;
 	color: #333;
+	overflow: hidden;
+    /* background-color: #3498db; */
 }
 
 h1
@@ -66,7 +68,6 @@ h2
 	line-height: 36px;
 	font-weight: 300;
 	margin-bottom:0px;
-
 }
 
 h3
@@ -87,13 +88,14 @@ h4
 	color:#333;
 }
 
-a
+a 
 {
 	text-decoration:none;
 	color:#333;
 }
 
-p {
+p 
+{
 	margin-top:10px;
 }
 
