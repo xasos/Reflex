@@ -7,7 +7,7 @@ var time = 0; //time in ms
 
 function startGame() {
     while (lives > 0) {
-        direction = Math.floor(Math.random()*2);
+        direction = Math.floor(Math.random()*5);
         displayDirection(direction);
         console.log("direction is: " + direction)
 
@@ -15,39 +15,57 @@ function startGame() {
             if (time < 200) {
                 score+=30;
             }
-            else if(time <400) {
+            else if(time < 400) {
                 score+=15;
             }
-            else {
-                score+=5;
-            }
-
+            else score+=5;
         }
         else lives--;
    }
 };
 
-function displayDirection(index) { //green: #2ecc71, red: #e74c3c
+function displayDirection(index) { 
     console.log(index);
-    correct = true;
-    time = Date();
-    colorNum = Math.floor(Math.random)
-    if (colorNum === 1) {
-        color = "Red";
+    colorNum = Math.floor(Math.random()*2)
+    if (colorNum === 1) { //green
+        $("#box").css({"background": "#e74c3c"}); 
     }
-    else {
-        color = "Green";
+    else { //red
+        $("#box").css({"background": "#e74c3c"});
     }
     switch(index) {
-      case 0:  $(".bordered").css("border", "1px solid black"); 
+      case 0:  
       case 1:
       case 2:
       case 3:
       case 4:
     }
+
+    checkWinner(colorNum, index);
+
+    // correct = true;
+    // time = Date();
+    
 };
 
- $(function() {
+function checkWinner(numColor, direcArrow) {
+    if (numColor === 1) {
+        if (userTouch === direcArrow) {
+                points++;
+        };
+        else lives--;
+    }
+    else {
+        if (userTouch !=== direcArrow) {
+            points++;
+        };
+        else lives--;
+
+    }
+
+};
+
+$(function() {
     $("#test").swipe( {
         swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
             $("#test").text("You swiped " + direction + " with " + fingerCount + " fingers");
