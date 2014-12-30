@@ -5,6 +5,11 @@ var direction = 0;
 var correct = false;
 var time = 0; //time in ms
 
+function init() {
+    var timer = new Timer();
+    timer.reset();
+}
+
 function startGame() {
     while (lives > 0) {
         direction = Math.floor(Math.random()*5);
@@ -77,6 +82,8 @@ $(function() {
         fingers:'all'
     });
 });
+
+
 // var score = 0
 // var lives = 3;
 //
